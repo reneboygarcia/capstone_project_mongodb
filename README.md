@@ -1,5 +1,5 @@
 # Capstone Project
-![dtc logo](images/dtc_logo.jpeg)
+![dtc logo](images/dtc_logo_.png)
 
 ## Preamble/Thank you.
 
