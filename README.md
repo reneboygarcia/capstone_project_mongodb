@@ -38,61 +38,61 @@ The purpose of this is to generate the credentials  or URI string needed to acce
 
 ![sample_airbnb](images/mongodb_atlas_sample_data.png)
 
-1. Get started with [MongoDB Atlas](https://learn.mongodb.com/learn/course/getting-started-with-mongodb-atlas/lesson-2-creating-and-deploying-at-atlas-cluster/learn?client=customer&page=1&wvideo=q744h1g773). 
+   1. Get started with [MongoDB Atlas](https://learn.mongodb.com/learn/course/getting-started-with-mongodb-atlas/lesson-2-creating-and-deploying-at-atlas-cluster/learn?client=customer&page=1&wvideo=q744h1g773). 
+   <p><a href="https://learn.mongodb.com/learn/course/getting-started-with-mongodb-atlas/lesson-2-creating-and-deploying-at-atlas-cluster/learn?client=customer&amp;page=1&amp;wvideo=q744h1g773"><img src="https://embed-ssl.wistia.com/deliveries/42f644803955636b8b57a75a3dc6da4f.jpg?image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button=1&amp;image_play_button_color=00ed64e0" width="400" height="225" style="width: 400px; height: 225px;"></a></p><p><a href="https://learn.mongodb.com/learn/course/getting-started-with-mongodb-atlas/lesson-2-creating-and-deploying-at-atlas-cluster/learn?client=customer&amp;page=1&amp;wvideo=q744h1g773"></a></p>   
 
-<p><a href="https://learn.mongodb.com/learn/course/getting-started-with-mongodb-atlas/lesson-2-creating-and-deploying-at-atlas-cluster/learn?client=customer&amp;page=1&amp;wvideo=q744h1g773"><img src="https://embed-ssl.wistia.com/deliveries/42f644803955636b8b57a75a3dc6da4f.jpg?image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button=1&amp;image_play_button_color=00ed64e0" width="400" height="225" style="width: 400px; height: 225px;"></a></p><p><a href="https://learn.mongodb.com/learn/course/getting-started-with-mongodb-atlas/lesson-2-creating-and-deploying-at-atlas-cluster/learn?client=customer&amp;page=1&amp;wvideo=q744h1g773"></a></p>   
-
-2. Using [MongoDB Connection Strings](https://learn.mongodb.com/learn/course/connecting-to-a-mongodb-database/lesson-1-using-mongodb-connection-strings/learn?client=customer&wvideo=eh4048sbrf) 
+   2. Using [MongoDB Connection Strings](https://learn.mongodb.com/learn/course/connecting-to-a-mongodb-database/lesson-1-using-mongodb-connection-strings/learn?client=customer&wvideo=eh4048sbrf) 
 
 <p><a href="https://learn.mongodb.com/learn/course/connecting-to-a-mongodb-database/lesson-1-using-mongodb-connection-strings/learn?client=customer&amp;wvideo=eh4048sbrf"><img src="https://embed-ssl.wistia.com/deliveries/92534a1a893a64cbba544ac9d1ec8c00.jpg?image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button=1&amp;image_play_button_color=00ed64e0" width="400" height="225" style="width: 400px; height: 225px;"></a></p><p><a href="https://learn.mongodb.com/learn/course/connecting-to-a-mongodb-database/lesson-1-using-mongodb-connection-strings/learn?client=customer&amp;wvideo=eh4048sbrf"></a></p>
 
-3. We will use the URI string to create Secret Block on Prefect.
+   3. We will use the URI string to create Secret Block on Prefect.
    
 ![prefect secret](images/prefect_secret.png)
 
 ![prefect secret_1](images/prefect_secret_1.png)
 
 Google Cloud and BiqQuery
+
 It is assumed that you have: 
-- created an account in Google Cloud
-- Created a [project](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
-- Access control for projects with [IAM](https://cloud.google.com/resource-manager/docs/access-control-proj).
-- Created a [service account](https://cloud.google.com/iam/docs/service-account-overview).
-- Created a [Prefect account](https://app.prefect.cloud/).
+  - created an account in Google Cloud
+  - Created a [project](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
+  - Access control for projects with [IAM](https://cloud.google.com/resource-manager/docs/access-control-proj).
+  - Created a [service account](https://cloud.google.com/iam/docs/service-account-overview).
+  - Created a [Prefect account](https://app.prefect.cloud/).
   
  
-1. Create a GCS Bucket and BQ Dataset using Terraform. Detailed instructions [here](terraform/README-TERRAFORM.md).
-   
-2. Create a GCP Credentials block on Prefect 
+  1. Create a GCS Bucket and BQ Dataset using Terraform. Detailed instructions [here](terraform/README-TERRAFORM.md).
+     
+  2. Create a GCP Credentials block on Prefect.
 
-![gcp creds](images/prefect_gcp_creds.png)
-![gcp creds_1](images/prefect_gcp_creds_1.png)
+  ![gcp creds](images/prefect_gcp_creds.png)
+  ![gcp creds_1](images/prefect_gcp_creds_1.png)
 
-3. Create GCS Bucket block on Prefect
-   
-![gcs bucket](images/prefect_gcs_bucket.png)
-![gcs bucket_1](images/prefect_gcs_bucket_1.png)
+  3. Create GCS Bucket block on Prefect.
 
-4. Create a Prefect Deployment
-    - On your terminal, run `prefect_deployment.py`
-    - Check on Prefect Cloud UI to verify that a deployment has been created.
-5. 
-## Technologies 
+  ![gcs bucket](images/prefect_gcs_bucket.png)
+  ![gcs bucket_1](images/prefect_gcs_bucket_1.png)
 
-You don't have to limit yourself to technologies covered in the course. You can use alternatives as well:
+  4. Create a Github block on Prefect.
 
-* Cloud: AWS, GCP, Azure or others
-* Infrastructure as code (IaC): Terraform, Pulumi, Cloud Formation, ...
-* Workflow orchestration: Airflow, Prefect, Luigi, ...
-* Data Wareshouse: BigQuery, Snowflake, Redshift, ...
-* Batch processing: Spark, Flink, AWS Batch, ...
-* Stream processing: Kafka, Pulsar, Kinesis, ...
+  ![github](images/prefect_github.png)
+  ![github_1](images/prefect_github_1.png)
 
-If you use something that wasn't covered in the course, 
-be sure to explain what the tool does.
+  5.  Create a Prefect Deployment
+      - On your terminal, run `prefect_deployment.py`
+      - Check on Prefect Cloud UI to verify that a deployment has been created.
 
-If you're not certain about some tools, ask in Slack.
+  6. Login to prefect cloud then start Prefect Agent
+      - Run `prefect cloud login`
+      - Follow the prompts.
+      - Run `prefect agent start -q default`
+       ![prefect agent](images/prefect%20_agent.png)
+  7. Run Prefect Deployment
+      - Run `prefect deployment run etl-mongodb-to-bq/airbnb-flow --params '{"db_name":"sample_airbnb", "coll_name": "listingsAndReviews"}'`
 
+      - OR You can run deployments on https://app.prefect.cloud/,
+            - Deployments/<name of deployment>
+            - click the vertical ellipsis, then run  
 
 ## Metabase Dashboard
 

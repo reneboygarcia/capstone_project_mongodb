@@ -1,8 +1,9 @@
 ## Running Metabase on Docker
-Source: https://www.metabase.com/docs/latest/installation-and-operation/running-metabase-on-docker
 Metabase provides an official Docker image via Dockerhub that can be used for deployments on any system that is running Docker.
 
-If you’re trying to upgrade your Metabase version on Docker, check out these upgrading instructions
+Source: https://www.metabase.com/docs/latest/installation-and-operation/running-metabase-on-docker
+
+![metabase home](../images/metabase_home.png)
 
 ## Open Source quick start
 Use this quick start to run the Open Source version of Metabase locally. See below for instructions on running Metabase in production.
@@ -11,6 +12,7 @@ Assuming you have Docker installed and running, get the latest Docker image:
 `docker pull metabase/metabase:latest`
 
 Then start the Metabase container:
+
 `docker run -d -p 3000:3000 --name metabase metabase/metabase`
 
 This will launch an Metabase server on port 3000 by default.
@@ -27,6 +29,7 @@ To run your Open Source Metabase on a different port, say port 12345:
 
 ## Google BigQuery
 Source: https://www.metabase.com/docs/latest/databases/connections/bigquery
+
 To add a database connection, click on the gear icon in the top right, and navigate to Admin settings > Databases > Add a database.
 
 ## Prerequisites
@@ -45,6 +48,7 @@ To create the service account JSON file, follow Google’s documentation on sett
         > BigQuery Data Viewer
         > BigQuery Metadata Viewer
         > BigQuery Job User (distinct from BigQuery User)
+
 > For more information on roles in BigQuery, see Google Cloud Platform’s documentation.
 
     1. Create key. Once you have assigned roles to the service account, click on the Create Key button, and select JSON for the key type. The JSON file will download to your computer.
@@ -56,6 +60,8 @@ To create the service account JSON file, follow Google’s documentation on sett
     4. On the project folder (This is the submitted folder on github), got to metabase folder, open one the files, then, copy and paste it to the SQL editor of Metabase.
     5. Click Save, give it a name,
     6. Then press Run Query (this is the button on the lower right corner)
+
+[Sample Video](../video/create_dashboard_metabase.mov)
 
 # Another Option: Using Metabase Cloud.
     1. Connect via linkedin, so I can grant you temporary access.

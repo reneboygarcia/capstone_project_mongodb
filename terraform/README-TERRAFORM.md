@@ -1,19 +1,25 @@
-## Set-up
+# Terraform Setup
+![terraform home](../images/terraform_home.png)
 
-# Install gcloud CLI, https://cloud.google.com/sdk/docs/install
-# Install Terraform, https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/install-cli
+## Prerequisites
+1. Install gcloud CLI, https://cloud.google.com/sdk/docs/install
+2. Install Terraform, https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/install-cli
 
-# You can Refresh service-account's auth-token for this session
-gcloud auth application-default login
+## Instructions
+1. You can Refresh service-account's auth-token for this session
+    - Run `gcloud auth application-default login`
 
-# initialized terraform  
-terraform init
+2. Initialized terraform, On your folder, Open a terminal
+   - Run `terraform init`
+![terraform plan](../images/terraform_init.png)
 
-# Check changes to new infra plan
-terraform plan
+3. Check changes to new infra plan
+   - Run `terraform plan`
+  ![terraform plan](../images/terraform_plan.png)
 
-# Apply changes to infra plan, this will create the GCS Bucket and BQ dataset
-terraform apply
+4. Apply changes to infra plan, this will create the GCS Bucket and BQ dataset
+    - Run `terraform apply`
+![terraform apply](../images/terraform_apply_1.png)
 
-# Delete infra AFTER your work, to avoid costs on any running services
-terraform destroy
+5. Delete infra AFTER your work, to avoid costs on any running services
+    - Run `terraform destroy`
