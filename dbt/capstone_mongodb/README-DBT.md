@@ -5,17 +5,17 @@
 1. Install with `pip`. https://docs.getdbt.com/docs/core/pip-install
 
 ### Initialized dbt
-1. on your Explorer, right click on the folder you are working on, then, click `Open in Integrated Terminal`
+1. Using VS Code, on Explorer, right click on the folder you are working on, then, click `Open in Integrated Terminal`
 2. Run `dbt init`
 3. Follow the prompt
    > if your location is different than US or EU, you can change location later
    
    > Run `dbt debug --config-dir` to locate the profile.yml file. You can then update the location.
 ![Alt text](../../images/data_location.png)
-4. Run `dbt debug`, this check if you have the correct configs.
-5. On metabase folder, copy and paste sql files to /models folder
-6. Run `dbt run`. This will create a temporary view on your BQ datasets. This will also reflect on Metabase.
-7. On Metabase, you can watch this [video](../../video/create_dashboard_metabase.mov) to save temporary views table then insert this to dashboard.
+1. Run `dbt debug`, this check if you have the correct configs.
+2. On metabase folder, copy and paste sql files to /models folder
+3. Run `dbt run`. This will create a temporary view on your BQ datasets. This will also reflect on Metabase.
+4. On Metabase, you can watch this [video](../../video/create_dashboard_metabase.mov) to save temporary views table then insert this to dashboard.
    
 
 ### Resources:
