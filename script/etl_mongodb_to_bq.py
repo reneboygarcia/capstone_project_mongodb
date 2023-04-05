@@ -44,6 +44,7 @@ def extract_collection(db_name: str, coll_name: str) -> pd.DataFrame:
     docs = db_coll.find({})
     df = pd.json_normalize(docs, sep="_")
     print("Done...Extraction")
+    print(f"Extracted: {df.shape[0]} rows")
     return df
 
 
