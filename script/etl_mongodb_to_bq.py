@@ -38,7 +38,7 @@ def get_mongo_client():
 # Extract `sample_airbnb` from mongodb sample_database
 # # Function extract-collection
 # Define a function to extract all the documents inside the collection
-@task(log_prints=True, name="get-collection-from-mongodb")
+@flow(log_prints=True, name="extract-collection-from-mongodb")
 def extract_collection(db_name: str, coll_name: str) -> pd.DataFrame:
     mongo_client = get_mongo_client()
     db = mongo_client[db_name]
