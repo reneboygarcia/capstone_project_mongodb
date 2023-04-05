@@ -10,9 +10,6 @@ from pymongo import MongoClient
 import time
 from google.cloud import bigquery
 
-# Display
-pd.set_option("display.max_columns", None)
-pd.set_option("expand_frame_repr", False)
 # Prefect
 from prefect_gcp import GcpCredentials
 from prefect import task, flow
