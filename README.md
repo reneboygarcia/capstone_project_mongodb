@@ -1,4 +1,5 @@
 # Capstone Project
+![dtc logo](images/dtc_logo.jpeg)
 
 ## Preamble/Thank you.
 
@@ -15,6 +16,8 @@ Data pipelines are critical to modern data infrastructure, as they allow busines
 As a final project to conclude the Data Engineering Zoomcamp. We will try to create a data pipeline extracting data stored in MongoDB, I will use the `airbnb sample dataset`.
 
 The pipeline involves moving data from MongoDB to GCS to BQ for further analysis, followed by visualizing and analyzing the data with Metabase. The Google Cloud Storage and BigQuery Python APIs allow us to load and transform the data, respectively, while Metabase connects to the BQ warehouse and enables us to explore and analyze their data. By leveraging these tools and technologies, we are able to optimize our data pipeline and gain valuable insights from our data.
+
+![arch_diag](images/architecture_diagram.png)
 
 ## Setup Environment
 
