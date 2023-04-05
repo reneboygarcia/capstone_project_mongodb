@@ -1,12 +1,12 @@
 # Capstone Project
 ![dtc logo](images/dtc_logo_.png)
 
-## Preamble/Thank you.
+### Preamble
 
 I would like to express our appreciation for the smart, talented people of Data Engineering Zoomcamp and its helpful community for putting the course that helped us gain the skills and knowledge necessary to build this pipeline. Their guidance and expertise have been invaluable in our journey towards building efficient and effective data pipelines.
 
 
-## Introduction
+### Introduction
 
 Data pipelines are critical to modern data infrastructure, as they allow businesses to process, analyze, and store vast amounts of data efficiently. A common use case involves moving data from MongoDB to Google Cloud Storage (GCS) to BigQuery (BQ) for further analysis. At Dashlabs.ai, we use Argo as our primary orchestration tool. However, for this specific use case, I will use Prefect as a test bed to build and monitor the pipeline. 
 
