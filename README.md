@@ -88,59 +88,48 @@ It is assumed that you have:
       - Run `prefect agent start -q default`
        ![prefect agent](images/prefect%20_agent.png)
   7. Run Prefect Deployment
-      - Run `prefect deployment run etl-mongodb-to-bq/airbnb-flow --params '{"db_name":"sample_airbnb", "coll_name": "listingsAndReviews"}'`
-
-      - OR You can run deployments on https://app.prefect.cloud/,
-            - Deployments/<name of deployment>
-            - click the vertical ellipsis, then run  
+      - Run `prefect deployment run etl-mongodb-to-bq/airbnb-flow --params '{"db_name":"sample_airbnb", "coll_name": "listingsAndReviews"}'` 
+    
+        ![Alt text](images/prefect_completed.png)
 
 ## Metabase Dashboard
 
-You can build a dashboard with any of the tools shown in the course (Data Studio or Metabase) or any other BI tool of your choice. If you do use another tool, please specify and make sure that the dashboard is somehow accessible to your peers. 
+The listings and Reviews dashboard consists of 6 cards. I choose this
+questions to answer to demonstrate proof-of-skill.
 
-Your dashboard should contain at least two tiles, we suggest you include:
+> ##### Note: The data does not include date and time of check-in and check-out. 
+> ##### Maybe for privacy reasons.
 
-- 1 graph that shows the distribution of some categorical data 
-- 1 graph that shows the distribution of the data across a temporal line
 
-Make sure that your graph is clear to understand by adding references and titles. 
+  1. How many total room does listings and reviews have?
+    > There are 5,555 listings on this dataset, just a sample subset.
+  2. How many rooms have no Wifi and Internet amenities in listings_and_reviews?
+    > For those who wants to disconnect, your best bet is to got to Brazil, 
+      as more listings there have no Wifi and Internet. 
+      Or maybe there are no services there 🤷🏽‍♂️
+  3. Table of address_country and number of amenities and number of rooms
+    > Hmmm. There are just 3 types of room in Airbnb.
+  4. What is the total revenue generated per country?
+    > Based on price column, Hong Kong 🇭🇰 got the larger share and China 🇨🇳 has the least.
+  5. What room types are present in the sample_airbnb.listingsAndReviews collection?
+    > Hmmm. There are just 3 types of room in Airbnb based on this dataset. I bet there more...
+  6. Number of first reviews over time?
+    > Using the first review column. It seems people pen 🔏 their first review on January's.
+
 
 ![dashboard_metabase](images/dashboard_metabase.png)
+> ###### Due to time constraints, I was not able to do, much complex graphs and CTE's. I will
+> ###### update this if time permits :)
 
 
-## Peer review criteria
+## Outro
 
-* Problem description
-    * 0 points: Problem is not described
-    * 1 point: Problem is described but shortly or not clearly 
-    * 2 points: Problem is well described and it's clear what the problem the project solves
-* Cloud
-    * 0 points: Cloud is not used, things run only locally
-    * 2 points: The project is developed in the cloud
-    * 4 points: The project is developed in the cloud and IaC tools are used
-* Data ingestion (choose either batch or stream)
-    * Batch / Workflow orchestration
-        * 0 points: No workflow orchestration
-        * 2 points: Partial workflow orchestration: some steps are orchestrated, some run manually
-        * 4 points: End-to-end pipeline: multiple steps in the DAG, uploading data to data lake
-    * Stream
-        * 0 points: No streaming system (like Kafka, Pulsar, etc)
-        * 2 points: A simple pipeline with one consumer and one producer
-        * 4 points: Using consumer/producers and streaming technologies (like Kafka streaming, Spark streaming, Flink, etc)
-* Data warehouse
-    * 0 points: No DWH is used
-    * 2 points: Tables are created in DWH, but not optimized
-    * 4 points: Tables are partitioned and clustered in a way that makes sense for the upstream queries (with explanation)
-* Transformations (dbt, spark, etc)
-    * 0 points: No tranformations
-    * 2 points: Simple SQL transformation (no dbt or similar tools)
-    * 4 points: Tranformations are defined with dbt, Spark or similar technologies
-* Dashboard
-    * 0 points: No dashboard
-    * 2 points: A dashboard with 1 tile
-    * 4 points: A dashboard with 2 tiles
-* Reproducibility
-    * 0 points: No instructions how to run code at all
-    * 2 points: Some instructions are there, but they are not complete
-    * 4 points: Instructions are clear, it's easy to run the code, and the code works
+In conclusion, we have successfully created an efficient and automated data pipeline that fetches data from MongoDB, loads it into GCS and BQ, and visualizes it using Metabase. 
+
+This pipeline has enabled us to gain valuable insights from our data and can make informed decisions based on these insights.
+
+Finger-cross that this pipeline can pass the peer review. 🤞🏽
+
+
+
 

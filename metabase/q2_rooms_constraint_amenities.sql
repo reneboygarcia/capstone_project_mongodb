@@ -1,4 +1,4 @@
--- Q2: How many rooms have no certain amenities in listings_and_reviews?
+-- Q2: How many rooms have no Wifi and Internet in listings_and_reviews?
 
 SELECT
   address_country,
