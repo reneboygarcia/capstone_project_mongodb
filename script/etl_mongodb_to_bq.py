@@ -38,16 +38,19 @@ def get_mongo_client():
 @flow(log_prints=True, name="extract-collection-from-mongodb")
 def extract_collection(db_name: str, coll_name: str) -> pd.DataFrame:
     mongo_client = get_mongo_client()
+    print("Extracting collection from MongoDB.....")
     db = mongo_client[db_name]
     db_coll = db.get_collection(coll_name)
     docs = db_coll.find({})
     df = pd.json_normalize(docs, sep="_")
+    print("Done...Extraction")
     return df
 
 
 # Define a function to tweak the Dataframe to different dtypes so it can be processed
 @task(log_prints=True, name="tweak-df")
 def tweak_df(df: pd.DataFrame) -> pd.DataFrame:
+    print("Tweaking DataFrame to aling Data types....")
     # This is a challenge when doing pipeline, we are getting error
     # when uploading to GCS or BQ. Thats why we have to convert it.
 
@@ -91,7 +94,7 @@ def tweak_df(df: pd.DataFrame) -> pd.DataFrame:
         ),
         _bq_inserted_at=datetime.now(),
     )
-
+    print("Done....Tweaking")
     return df
 
 
@@ -113,6 +116,7 @@ def write_to_gcs(df: pd.DataFrame, db_name: str, coll_name: str) -> None:
     try:
         # directory.mkdir()
         os.makedirs(directory, exist_ok=True)
+        print("Uploading data to GCS....please wait")
         gcs_block = GcsBucket.load("prefect-gcs-block-airbnb")
         gcs_block.upload_from_dataframe(
             df, to_path=path_name, serialization_format="parquet_snappy"
@@ -132,6 +136,7 @@ def create_bq_dataset(db_name: str, coll_name: str) -> None:
     gcp_credentials_block = GcpCredentials.load("prefect-gcs-2023-creds")
     converted_coll_name = convert_to_split_case(coll_name)
     df = pd.DataFrame()
+    print("Creating blank dataset..before uploading data....")
     df.to_gbq(
         destination_table=f"{db_name}.{converted_coll_name}",
         project_id="dtc-de-2023",

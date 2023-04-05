@@ -6,7 +6,7 @@ pandas-gbq==0.19.1
 pandas==1.5.2
 protobuf==4.21.11
 pyarrow==10.0.1
-
+prefect-gcp[cloud_storage]==0.3.0
 
 # instructions
 
