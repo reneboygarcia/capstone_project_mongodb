@@ -128,8 +128,6 @@ def write_to_gcs(df: pd.DataFrame, db_name: str, coll_name: str) -> None:
 
 
 # # write-gcs-to-bq
-
-
 # ## Function create-bq-dataset
 # Define a function that will create the BQ dataset and create a blank Dataframe
 @flow(log_prints=True, name="write-mongodb-to-bq")
