@@ -11,15 +11,16 @@
 
 2. Initialized terraform, On your folder, Open a terminal
    - Run `terraform init`
+   
 ![terraform plan](../images/terraform_init.png)
 
-3. Check changes to new infra plan
+1. Check changes to new infra plan
    - Run `terraform plan`
   ![terraform plan](../images/terraform_plan.png)
 
-4. Apply changes to infra plan, this will create the GCS Bucket and BQ dataset
+1. Apply changes to infra plan, this will create the GCS Bucket and BQ dataset
     - Run `terraform apply`
 ![terraform apply](../images/terraform_apply_1.png)
 
-5. Delete infra AFTER your work, to avoid costs on any running services
+1. Delete infra AFTER your work, to avoid costs on any running services
     - Run `terraform destroy`
