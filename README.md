@@ -1,17 +1,29 @@
 # Capstone Project
 ![dtc logo](images/dtc_logo_.png)
 
-### Preamble
+Table of Contents
+- [Capstone Project](#capstone-project)
+  - [Preamble](#preamble)
+  - [Introduction](#introduction)
+  - [Problem statement](#problem-statement)
+  - [Setup Environment](#setup-environment)
+  - [Setup Pipeline](#setup-pipeline)
+    - [Crash Course on MongoDB](#crash-course-on-mongodb)
+    - [Google Cloud and BiqQuery](#google-cloud-and-biqquery)
+    - [Metabase Dashboard](#metabase-dashboard)
+  - [Outro](#outro)
+
+## Preamble
 
 I would like to express our appreciation for the smart, talented people of Data Engineering Zoomcamp and its helpful community for putting the course that helped us gain the skills and knowledge necessary to build this pipeline. Their guidance and expertise have been invaluable in our journey towards building efficient and effective data pipelines.
 
 
-### Introduction
+## Introduction
 
 Data pipelines are critical to modern data infrastructure, as they allow businesses to process, analyze, and store vast amounts of data efficiently. A common use case involves moving data from MongoDB to Google Cloud Storage (GCS) to BigQuery (BQ) for further analysis. At Dashlabs.ai, we use Argo as our primary orchestration tool. However, for this specific use case, I will use Prefect as a test bed to build and monitor the pipeline. 
 
 
-### Problem statement
+## Problem statement
 
 As a final project to conclude the Data Engineering Zoomcamp. We will try to create a data pipeline extracting data stored in MongoDB, I will use the `airbnb sample dataset`.
 
@@ -32,7 +44,7 @@ On your terminal, follow this.
 
 ## Setup Pipeline 
 
-Crash Course on MongoDB
+### Crash Course on MongoDB
 
 The purpose of this is to generate the credentials  or URI string needed to access the MongoDB database. Your URI string should look something like this
 `mongodb+srv://m001-student:*****@sandbox.7x9ridu.mongodb.net/admin`
@@ -54,10 +66,10 @@ The purpose of this is to generate the credentials  or URI string needed to acce
 
 ![prefect secret_1](images/prefect_secret_1.png)
 
-Google Cloud and BiqQuery
+### Google Cloud and BiqQuery
 
 It is assumed that you have: 
-  - created an account in Google Cloud
+  - Created an account in Google Cloud
   - Created a [project](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
   - Access control for projects with [IAM](https://cloud.google.com/resource-manager/docs/access-control-proj).
   - Created a [service account](https://cloud.google.com/iam/docs/service-account-overview).
@@ -95,7 +107,7 @@ It is assumed that you have:
     
         ![Alt text](images/prefect_completed.png)
 
-## Metabase Dashboard
+### Metabase Dashboard
 
 The listings and Reviews dashboard consists of 6 cards. I choose this
 questions to answer to demonstrate proof-of-skill.
@@ -119,11 +131,8 @@ questions to answer to demonstrate proof-of-skill.
   6. Number of first reviews over time?
     > Using the first review column. It seems people pen 🔏 their first review on January's.
 
-
 ![dashboard_metabase](images/dashboard_metabase.png)
-> ###### Due to time constraints, I was not able to do, much complex graphs and CTE's. I will
-> ###### update this if time permits :)
-
+> ###### Due to time constraints, I was not able to do, much complex graphs and CTE's. I will update this if time permits :)
 
 ## Outro
 
@@ -131,7 +140,7 @@ In conclusion, we have successfully created an efficient and automated data pipe
 
 This pipeline has enabled us to gain valuable insights from our data and can make informed decisions based on these insights.
 
-Finger-cross that this pipeline can pass the peer review. 🤞🏽
+> ###### Finger-cross that this pipeline can pass the peer review. 🤞🏽
 
 
 
