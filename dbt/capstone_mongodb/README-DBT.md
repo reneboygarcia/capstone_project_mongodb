@@ -13,7 +13,7 @@
    > Run `dbt debug --config-dir` to locate the profile.yml file. You can then update the location.
 ![Alt text](../../images/data_location.png)
 1. Run `dbt debug`, this check if you have the correct configs.
-2. On metabase folder, copy and paste sql files to /models folder
+2. On [metabase](../../metabase) folder, copy and paste sql files to your dbt ../models folder
 3. Run `dbt run`. This will create a temporary view on your BQ datasets. This will also reflect on Metabase.
 4. On Metabase, you can watch this [video](../../video/create_dashboard_metabase.mov) to save temporary views table then insert this to dashboard.
    

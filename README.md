@@ -10,6 +10,7 @@ Table of Contents
   - [Setup Pipeline](#setup-pipeline)
     - [Crash Course on MongoDB](#crash-course-on-mongodb)
     - [Google Cloud and BiqQuery](#google-cloud-and-biqquery)
+    - [Data Transformation using dbt](#data-transformation-using-dbt)
     - [Metabase Dashboard](#metabase-dashboard)
   - [Outro](#outro)
 
@@ -107,14 +108,31 @@ It is assumed that you have:
     
         ![Alt text](images/prefect_completed.png)
 
+### Data Transformation using dbt
+You have the option to follow the instructions to transform your table using dbt [here](metabase/README-METABASE.md). 
+  
+
 ### Metabase Dashboard
 
+You can find the on how to run Metabase on Docker [here](metabase/README-METABASE.md). If you have already Metabase running on Docker follow the instructions below:
+
+Creating Visualization using Metabase SQL Query. [Sample Video here](video/create_dashboard_metabase.mov).
+
+   1. On the Metabase Home page, click `New` on upper right portion.
+   2. Click SQL Query
+   3. Select a database, on my end its `Data Eng 2023`, your might be different.
+   4. On the project folder (This is the submitted folder on github), go to metabase folder, open one the SQL file, then, copy and paste it to the SQL editor of Metabase.
+   5. Click Save, give it a name, or copy the filename.
+   6. Then press Run Query (this is the button on the lower right corner)
+
+Another Option: Using Metabase Cloud.
+  1. Connect via linkedin, so I can grant you temporary access.
+       http://www.linkedin.com/in/eboygarcia
+       
 The listings and Reviews dashboard consists of 6 cards. I choose this
 questions to answer to demonstrate proof-of-skill.
-
 > ##### Note: The data does not include date and time of check-in and check-out. 
 > ##### Maybe for privacy reasons.
-
 
   1. How many total room does listings and reviews have?
     > There are 5,555 listings on this dataset, just a sample subset.

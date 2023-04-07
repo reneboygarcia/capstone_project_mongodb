@@ -1,9 +1,22 @@
+# Metabase
+
+Table of Contents
+
+- [Metabase](#metabase)
+  - [Running Metabase on Docker](#running-metabase-on-docker)
+  - [Open Source quick start](#open-source-quick-start)
+  - [Google BigQuery](#google-bigquery)
+  - [Prerequisites](#prerequisites)
+  - [Google Cloud Platform: creating a service account and JSON file](#google-cloud-platform-creating-a-service-account-and-json-file)
+
+
 ## Running Metabase on Docker
 Metabase provides an official Docker image via Dockerhub that can be used for deployments on any system that is running Docker.
 
 Source: https://www.metabase.com/docs/latest/installation-and-operation/running-metabase-on-docker
 
 ![metabase home](../images/metabase_home.png)
+
 
 ## Open Source quick start
 Use this quick start to run the Open Source version of Metabase locally. See below for instructions on running Metabase in production.
@@ -51,18 +64,5 @@ To create the service account JSON file, follow Google’s documentation on sett
 
 > For more information on roles in BigQuery, see Google Cloud Platform’s documentation.
 
-    1. Create key. Once you have assigned roles to the service account, click on the Create Key button, and select JSON for the key type. The JSON file will download to your computer.
+   1. Create key. Once you have assigned roles to the service account, click on the Create Key button, and select JSON for the key type. The JSON file will download to your computer.
 
-# Creating Visualization using Metabase SQL Query
-    1. On the Metabase Home page, click `New` on upper right portion.
-    2. Click SQL Query
-    3. Select a database, on my end its `Data Eng 2023`, your might be different.
-    4. On the project folder (This is the submitted folder on github), got to metabase folder, open one the files, then, copy and paste it to the SQL editor of Metabase.
-    5. Click Save, give it a name,
-    6. Then press Run Query (this is the button on the lower right corner)
-
-[Sample Video](../video/create_dashboard_metabase.mov)
-
-# Another Option: Using Metabase Cloud.
-    1. Connect via linkedin, so I can grant you temporary access.
-       http://www.linkedin.com/in/eboygarcia
